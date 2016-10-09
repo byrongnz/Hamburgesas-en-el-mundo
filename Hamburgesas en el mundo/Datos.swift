@@ -2,7 +2,7 @@
 //  Datos.swift
 //  Hamburgesas en el mundo
 //
-//  Created by Gibreel Martínez on 08/10/16.
+//  Created by Byron Gnz on 08/10/16.
 //  Copyright © 2016 Byron Gnz. All rights reserved.
 //
 
