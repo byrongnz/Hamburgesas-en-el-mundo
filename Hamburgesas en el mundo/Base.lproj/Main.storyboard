@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hamburgesas_en_el_mundo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kae-2U-27h">
+                                <frame key="frameInset" minX="95" minY="318" width="184" height="30"/>
+                                <color key="backgroundColor" red="0.1384830367041632" green="0.78987068965517238" blue="0.73928309860645913" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Quiero una hamburguesa!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="quieroUnaBurguer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNg-cm-KbY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4z-tP-Bd5">
+                                <frame key="frameInset" minX="95" minY="272" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="4pD-NZ-Q1P"/>
+                                    <constraint firstAttribute="height" constant="21" id="IoM-ay-oux"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5f-GS-b4r">
+                                <frame key="frameInset" minX="95" minY="237" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ZSA-hp-UBw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k4z-tP-Bd5" firstAttribute="trailing" secondItem="kae-2U-27h" secondAttribute="trailing" id="IeK-if-rR2"/>
+                            <constraint firstItem="k4z-tP-Bd5" firstAttribute="leading" secondItem="a5f-GS-b4r" secondAttribute="leading" id="JIb-Uv-Uej"/>
+                            <constraint firstItem="k4z-tP-Bd5" firstAttribute="leading" secondItem="kae-2U-27h" secondAttribute="leading" id="KEd-Zr-Ynp"/>
+                            <constraint firstItem="k4z-tP-Bd5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="272" id="Msa-LF-XRh"/>
+                            <constraint firstItem="k4z-tP-Bd5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X8f-YZ-vGL"/>
+                            <constraint firstItem="kae-2U-27h" firstAttribute="top" secondItem="k4z-tP-Bd5" secondAttribute="bottom" constant="25" id="ppA-A3-9RL"/>
+                            <constraint firstItem="k4z-tP-Bd5" firstAttribute="top" secondItem="a5f-GS-b4r" secondAttribute="bottom" constant="14" id="tg6-fE-pJn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="etiquetaBurger" destination="k4z-tP-Bd5" id="vC7-PM-J5G"/>
+                        <outlet property="etiquetaDelPais" destination="a5f-GS-b4r" id="NeG-Js-ic5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-311.19999999999999" y="151.57421289355324"/>
         </scene>
     </scenes>
 </document>
